@@ -1,37 +1,215 @@
- <!doctype html>
-
-<!-- this is a comment for human! -->
-
+<!DOCTYPE html>
 <html lang="en">
 
-  <header>
-<title>Munim Baig's Portal</title>
-<link rel="stylesheet" href="css/master.css">
-<link rel="faviconIcon" href="favicon.ico" type="image/x-icon">
-<link rel="shortcut"  href="favicon.ico" type="image/x-icon">
-<meta name="viewport" content= "width=device-width, initial-scale=1, shrink to fit=no">
-<meta name="name" content="Munim Baig's Portal">
-<meta name="robots" content="noindex,nofollow">
- </header>
-  <body>
-    <img src="images/banner.jpg"width="75%" alt="banner">
-    <h1>Munim Baig's Portal</h1>
-    <h2>About Me</h2>
-    <p>I am a student at Fast University.</p>
-    <p>I am in the department of CS.</p>
-    <p>I am from the city of Multan.</p>
-    <h2>Credentials and Portfolio</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-    <p><a href="resume.html">My Resume</a> | <a href="https://github.com/Munimbaig024">My GitHub</a></p>
+  <!-- Put your site title here -->
+  <title>
+    Abdul Munim Baig | Computer Science Undergraduate & Developer
+  </title>
 
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:munimbaig12345@gmail.com">munimbaig12345@gmail.com</a></p>
-  </body>
+  <meta name="description"
+    content="Portfolio of Abdul Munim Baig, a Computer Science undergraduate skilled in Python, Java, React, and AI/ML.">
 
-  <footer>
-   <hr>
-   <code>copyright (c) 2022 Munim Baig </code>
+  <meta name="keywords" content="Abdul Munim Baig, Web Developer, AI, Machine Learning, Python, React, C++, Java" />
+  <link rel="stylesheet" href="index.css" />
+</head>
 
+<body>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+
+          <span>Abdul Munim Baig</span>
+        </h1>
+
+        <p>Computer Science Undergraduate | AI & Full Stack Developer</p>
+        <a href="#contact" class="btn btn--pink">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <!-- ***** Work ***** -->
+
+    <section class="work" id="work">
+      <div class="row">
+        <h2>My Work</h2>
+        <div class="work__boxes">
+
+          <!-- Each div with the work__box class is a project. -->
+
+          <!-- Project 1 -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Employee Management System</h3>
+              <p>
+                Full-stack employee management platform with React UI, Spring Boot REST API, and SQL CRUD operations.
+              </p>
+              <ul class="work__list">
+                <li>React</li>
+                <li>Spring Boot</li>
+                <li>SQL</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>MedBot – AI Medical Query Assistant</h3>
+              <p>
+                AI chatbot for medical queries using a quantized Llama 3.1 8B local model and a Gemini 1.5 API version.
+              </p>
+              <ul class="work__list">
+                <li>Python</li>
+                <li>Flask</li>
+                <li>TensorFlow</li>
+                <li>Gemini API</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Distributed File System (Mini-IPFS)</h3>
+              <p>
+                Ring-based DHT with B-Tree indexing for distributed storage, lookup, and fault-tolerant data
+                distribution.
+              </p>
+              <ul class="work__list">
+                <li>C++</li>
+                <li>SHA-1</li>
+                <li>B-Tree</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Multimodal RAG System</h3>
+              <p>
+                End-to-end system to process PDFs. Text/image embeddings indexed in FAISS, context-aware answers using
+                LLMs.
+              </p>
+              <ul class="work__list">
+                <li>Python</li>
+                <li>FAISS</li>
+                <li>React/Flask</li>
+                <li>Groq API</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ***** About ***** -->
+
+    <section class="about" id="about">
+      <div class="row">
+        <h2>About Me</h2>
+        <div class="about__content">
+          <div class="about__text">
+
+            <p>
+              Motivated Computer Science undergraduate with a solid foundation in programming, machine learning, and
+              full-stack development.
+              Hands-on experience in projects ranging from AI-powered applications to backend engineering and
+              distributed systems.
+              Skilled in Python, C++, Java, and SQL.
+            </p>
+
+            <a href="./CV_AbdulMunim.pdf" class="btn" target="_blank">My Resume</a>
+          </div>
+
+          <div class="about__photo-container">
+
+            <img class="about__photo" src="./images/Abdul-Munim.jpeg" alt="Abdul Munim Baig" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ***** Contact ***** -->
+
+  <section class="contact" id="contact">
+    <div class="row">
+      <h2>Get in Touch</h2>
+      <div class="contact__info">
+        <p>
+          Are you looking for a fast-performing and user-friendly website to
+          represent your product or business? or looking for any kind of
+          consultation? or want to ask questions? or have some advice for me
+          or just want to say "Hi 👋" in any case feel free to Let me know. I
+          will do my best to respond back. 😊 The quickest way to reach out to
+          me is via an email.
+        </p>
+
+        <a href="mailto:munim.baig02@gmail.com" class="btn">munim.baig02@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ***** Footer ***** -->
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://github.com/Munimbaig024" title="Link to Github Profile">
+            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.linkedin.com/in/abdul-munim-baig-b3741130a" title="Link to Linkedin Profile">
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+      </ul>
+
+      <p>
+        &copy; 2025 - Portfolio of Abdul Munim Baig.
+      </p>
+      <div class="footer__github-buttons">
+        <iframe src="https://ghbtns.com/github-btn.html?user=Munimbaig024&type=follow&count=true" frameborder="0"
+          scrolling="0" width="170" height="20" title="Follow Abdul Munim Baig on GitHub">
+        </iframe>
+      </div>
+    </div>
   </footer>
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image" />
+  </a>
+  <script src="./index.js"></script>
+</body>
 
 </html>
