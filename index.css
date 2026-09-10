@@ -311,6 +311,8 @@ h3 {
   line-height: 0.93;
   color: var(--white);
   margin-bottom: 3rem;
+  will-change: transform, opacity;
+  overflow: hidden;
 }
 
 .heading-primary__name { display: block; }
@@ -342,6 +344,8 @@ h3 {
   height: 1px;
   background: linear-gradient(to right, var(--accent), transparent);
   animation: scrollPulse 2s ease-in-out infinite;
+  will-change: width, opacity;
+  max-width: 16rem;
 }
 
 .scroll-label {
@@ -411,6 +415,8 @@ h3 {
   background: var(--black-2);
   overflow: hidden;
   transition: background 0.3s var(--ease-out);
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
 }
 
 .work__card:hover { background: var(--black-3); }
@@ -579,6 +585,19 @@ h3 {
   object-position: top center;
   filter: grayscale(15%) contrast(1.05);
   transition: filter 0.4s;
+  display: block;
+}
+
+/* Mobile: tighter, centered photo */
+@media (max-width: 900px) {
+  .about__photo-container {
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+
+  .about__photo {
+    max-height: clamp(28rem, 60vw, 44rem);
+  }
 }
 
 .about__photo-frame:hover .about__photo { filter: grayscale(0%) contrast(1); }

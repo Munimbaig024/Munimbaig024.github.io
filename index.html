@@ -14,6 +14,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="index.css" />
+  <!-- GSAP: cinematic scroll effects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <!-- Motion.dev: zero-setup auto-animations -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@11.11.9/dist/motion.js" defer></script>
 </head>
 
 <body>
@@ -26,27 +31,27 @@
   <header class="header" role="banner" id="top">
     <div class="row">
       <nav class="nav" role="navigation">
-        <div class="nav__logo">AM<span class="accent">.</span></div>
+        <div class="nav__logo" data-motion-fade>AM<span class="accent">.</span></div>
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link"><span class="nav__num">01.</span>Work</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link"><span class="nav__num">02.</span>About</a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link"><span class="nav__num">03.</span>Contact</a></li>
+          <li class="nav__item"><a href="#work" class="nav__link" data-motion-fade data-motion-delay="0.05"><span class="nav__num">01.</span>Work</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link" data-motion-fade data-motion-delay="0.1"><span class="nav__num">02.</span>About</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link" data-motion-fade data-motion-delay="0.15"><span class="nav__num">03.</span>Contact</a></li>
         </ul>
       </nav>
     </div>
 
     <div class="header__text-box row">
       <div class="header__text">
-        <div class="header__tag">[ AVAILABLE FOR WORK ]</div>
-        <h1 class="heading-primary">
+        <div class="header__tag" data-motion-fade data-motion-delay="0.2">[ AVAILABLE FOR WORK ]</div>
+        <h1 class="heading-primary" id="gsap-hero-title">
           <span class="heading-primary__name">Abdul<br>Munim<span class="accent">.</span></span>
         </h1>
-        <p class="header__sub">CS Graduate — AI/ML Engineer — Full Stack Dev</p>
-        <div class="header__cta">
+        <p class="header__sub" data-motion-fade data-motion-delay="0.4">CS Graduate — AI/ML Engineer — Full Stack Dev</p>
+        <div class="header__cta" data-motion-fade data-motion-delay="0.55">
           <a href="#contact" class="btn btn--primary">Get in touch <span class="btn__arrow">→</span></a>
           <a href="#work" class="btn btn--ghost">View work</a>
         </div>
-        <div class="header__scroll-hint">
+        <div class="header__scroll-hint" data-motion-fade data-motion-delay="0.7">
           <span class="scroll-line"></span>
           <span class="scroll-label">scroll</span>
         </div>
@@ -71,7 +76,7 @@
     <!-- ***** Work ***** -->
     <section class="work" id="work">
       <div class="row">
-        <div class="section-header">
+        <div class="section-header" data-gsap-section>
           <span class="section-tag">01 / PROJECTS</span>
           <h2>Selected<br>Work<span class="accent">.</span></h2>
         </div>
@@ -79,7 +84,7 @@
         <div class="work__grid">
 
           <!-- Project 1 -->
-          <div class="work__card work__card--featured" data-index="01" onclick="window.open('https://lnkd.in/p/dgHWjdtZ', '_blank')" style="cursor: pointer;">
+          <div class="work__card work__card--featured" data-gsap-card data-index="01" onclick="window.open('https://lnkd.in/p/dgHWjdtZ', '_blank')" style="cursor: pointer;">
             <div class="work__card-inner">
               <div class="work__card-top">
                 <span class="work__index">01</span>
@@ -100,7 +105,7 @@
           </div>
 
           <!-- Project 2 -->
-          <div class="work__card" data-index="02" onclick="window.open('https://github.com/Munimbaig024/HybridRAG-Retrieval-Augmented-QA-with-Hybrid-Search-Reranking', '_blank')" style="cursor: pointer;">
+          <div class="work__card" data-gsap-card data-index="02" onclick="window.open('https://github.com/Munimbaig024/HybridRAG-Retrieval-Augmented-QA-with-Hybrid-Search-Reranking', '_blank')" style="cursor: pointer;">
             <div class="work__card-inner">
               <div class="work__card-top">
                 <span class="work__index">02</span>
@@ -121,7 +126,7 @@
           </div>
 
           <!-- Project 3 -->
-          <div class="work__card work__card--featured" data-index="03" onclick="window.open('https://github.com/Munimbaig024/SyncScript-CRDT-Powered-Collaborative-Text-Editor', '_blank')" style="cursor: pointer;">
+          <div class="work__card work__card--featured" data-gsap-card data-index="03" onclick="window.open('https://github.com/Munimbaig024/SyncScript-CRDT-Powered-Collaborative-Text-Editor', '_blank')" style="cursor: pointer;">
             <div class="work__card-inner">
               <div class="work__card-top">
                 <span class="work__index">03</span>
@@ -142,7 +147,7 @@
           </div>
 
           <!-- Project 4 -->
-          <div class="work__card" data-index="04" onclick="window.open('https://github.com/Munimbaig024/ResilientAgent-Multi-Step-AI-Agent-with-Tool-Use-Recovery', '_blank')" style="cursor: pointer;">
+          <div class="work__card" data-gsap-card data-index="04" onclick="window.open('https://github.com/Munimbaig024/ResilientAgent-Multi-Step-AI-Agent-with-Tool-Use-Recovery', '_blank')" style="cursor: pointer;">
             <div class="work__card-inner">
               <div class="work__card-top">
                 <span class="work__index">04</span>
@@ -163,7 +168,7 @@
           </div>
 
           <!-- Project 5 -->
-          <div class="work__card work__card--featured" data-index="05" onclick="window.open('https://github.com/Munimbaig024/MERN-Task-Management-App', '_blank')" style="cursor: pointer;">
+          <div class="work__card work__card--featured" data-gsap-card data-index="05" onclick="window.open('https://github.com/Munimbaig024/MERN-Task-Management-App', '_blank')" style="cursor: pointer;">
             <div class="work__card-inner">
               <div class="work__card-top">
                 <span class="work__index">05</span>
@@ -228,7 +233,7 @@
     <!-- ***** About ***** -->
     <section class="about" id="about">
       <div class="row">
-        <div class="section-header">
+        <div class="section-header" data-gsap-section>
           <span class="section-tag">02 / ABOUT</span>
           <h2>Who I<br>Am<span class="accent">.</span></h2>
         </div>
@@ -279,9 +284,9 @@
   </main>
 
   <!-- ***** Contact ***** -->
-  <section class="contact" id="contact">
+    <section class="contact" id="contact">
     <div class="row">
-      <div class="section-header">
+      <div class="section-header" data-gsap-section>
         <span class="section-tag">03 / CONTACT</span>
         <h2>Let's<br>Talk<span class="accent">.</span></h2>
       </div>
